@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="asset/favicon.ico" />
+    <title>Bajakan store</title>
+    <link rel="stylesheet" href="style/global.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body class="container-fluid h-100 p-0">
+    <header
+      style="border-color: #033059 !important; z-index: 5"
+      class="container-fluid bg-light d-none d-xl-flex justify-content-center py-3 border-top border-5 shadow-sm position-fixed"
+    >
+      <section
+        class="container-xxl d-flex flex-row justify-content-between align-items-center"
+      >
+        <div class="d-flex align-items-center">
+          <img
+            style="width: 60px"
+            class="img-fluid"
+            src="asset/logo.webp"
+            alt="book store logo"
+          />
+          <a href="#home" class="h3 text-decoration-none ms-3 fw-bold">
+            <span class="textPrimaryColor">Bajakan</span>
+            <span class="textSecondaryColor">Store</span>
+          </a>
+        </div>
+        <form
+          action=""
+          class="col-12 d-flex flex-row align-items-center border border-1 border-secondary rounded-5 py-2 px-3 w-25"
+        >
+          <i class="bi bi-search"></i>
+          <input
+            type="text"
+            class="border-0 bg-transparent ms-2 w-100"
+            placeholder="Search book"
+          />
+        </form>
+        <nav>
+          <ul class="d-flex flex-row gap-5 m-0 p-0">
+            <li class="list-unstyled">
+              <a href="#categories" class="text-decoration-none text-dark"
+                >Categories</a
+              >
+            </li>
+            <li class="list-unstyled">
+              <a href="#topOfWeek" class="text-decoration-none text-dark"
+                >Top of week
+                <span class="bgPrimaryColor text-light py-2 px-2 rounded-3 ms-1"
+                  >new!</span
+                ></a
+              >
+            </li>
+            <li class="list-unstyled">
+              <a href="#service" class="text-decoration-none text-dark"
+                >Service</a
+              >
+            </li>
+            <li class="list-unstyled">
+              <a href="#faq" class="text-decoration-none text-dark">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#getInTouch"
+          class="btn bgPrimaryColor rounded-2 py-1 px-3 text-light fw-semibold"
+        >
+          Get in touch
+        </a>
+      </section>
+    </header>
+    <header style="border-color: #033059 !important; z-index: 5;" class="container-fluid d-block d-xl-none p-0 px-3 py-3 m-0 bg-light shadow-sm position-fixed border-top border-5">
+      <div class="row flex-row justify-content-between align-items-center p-0 m-0">
+        <div class="col-5 col-sm-3 col-md-2 d-flex flex-row align-items-center p-0">
+          <img class="col-4 img-fluid" src="asset/logo.webp" alt="">
+          <a href="#home" class="h3 text-decoration-none ms-2 m-0 fw-bold d-flex flex-row">
+            <span class="textPrimaryColor">Bajakan</span>
+            <span class="textSecondaryColor">Store</span>
+          </a>
+        </div>
+        <div class="col-auto humburger d-flex justify-content-center p-0">
+          <div class="line rounded-5"></div>
+        </div>
+      </div>
+      <nav class="mt-4 d-none">
+        <form
+          action=""
+          class="d-flex flex-row align-items-center border border-1 border-secondary rounded-5 py-2 px-3 w-25 w-100"
+        >
+          <i class="bi bi-search"></i>
+          <input
+            type="text"
+            class="border-0 bg-transparent ms-2 w-100"
+            placeholder="Search book"
+          />
+        </form>
+        <ul class="text-center p-0">
+            <li class="list-unstyled mt-4">
+              <a href="#categories" class="text-decoration-none text-dark"
+                >Categories</a
+              >
+            </li>
+            <li class="list-unstyled mt-4">
+              <a href="#topOfWeek" class="text-decoration-none text-dark"
+                >Top of week</a
+              >
+            </li>
+            </li>
+            <li class="list-unstyled mt-4">
+              <a href="#service" class="text-decoration-none text-dark"
+                >Service</a
+              >
+            </li>
+            <li class="list-unstyled mt-4">
+              <a href="#faq" class="text-decoration-none text-dark">FAQ</a>
+            </li>
+            <li class="list-unstyled mt-4">
+              <a href="#getInTouch" class="btn bgPrimaryColor rounded-2 py-2 px-3 text-light fw-semibold w-100">
+                Get in touch
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      id="home"
+      class="container-fluid row p-0 m-0 justify-content-around align-items-center"
+    >
+      <div class="col-12 col-sm-9 col-md-8 col-lg-5 text-center text-lg-start d-flex flex-column justify-content-center">
+        <h1 class="fw-bold textSecondaryColor">
+          Get various books at low prices, then your mind is open
+        </h1>
+        <h5 class="fw-normal my-4">
+          for our great future, find what book you want on our platform fastly,
+          and easily
+        </h5>
+        <div class="d-flex justify-content-center justify-content-lg-start align-items-center">
+          <a
+            href=""
+            class="col-6 col-sm-5 btn bgPrimaryColor d-flex justify-content-center align-items-center text-light py-2 px-3 rounded-5 fw-semibold fs-5"
+            >Find some <i class="bi bi-arrow-up-right-square ms-2 fs-4"></i
+          ></a>
+          <a class="col-4 ms-4 textPrimaryColor fw-medium fs-5" href="">Login</a>
+        </div>
+      </div>
+      <img class="col-4 d-none d-lg-block img-fluid" src="asset/book.webp" alt="" />
+    </main>
+    <section id="categories" class="container-fluid bgPrimaryColor py-5 m-0">
+      <div class="container-lg p-0">
+        <h2 class="text-light fw-bold">The shop categories</h2>
+        <div class="row d-flex row justify-content-between gap-5 gap-xl-2 mt-4 m-0">
+          <div
+            style="background-image: url('asset/ensiklopedia.webp'); background-size: cover;"
+            class="card col-12 col-sm-5 col-lg-2 border-0 p-0 rounded-3"
+          >
+            <h3 style="text-shadow: 3px 3px black;" class="opacity-1 text-light fw-bold mt-3 text-center">
+              encyclopedia
+            </h3>
+          </div>
+          <div
+            style="background-image: url('asset/komik.webp'); background-size: cover;"
+            class="card col-12 col-sm-5 col-lg-2 border-0 p-0 rounded-3"
+          >
+            <h3 style="text-shadow: 3px 3px black;" class="opacity-1 text-light fw-bold mt-3 text-center">comic</h3>
+          </div>
+          <div
+            style="background-image: url('asset/majalah.webp'); background-size: cover;"
+            class="card col-12 col-sm-5 col-lg-2 border-0 p-0 rounded-3"
+          >
+            <h3 style="text-shadow: 3px 3px black;" class="opacity-1 text-light fw-bold mt-3 text-center">
+              magazine
+            </h3>
+          </div>
+          <div
+            style="background-image: url('asset/resep.webp'); background-size: cover;"
+            class="card col-12 col-sm-5 col-lg-2 border-0 p-0 rounded-3"
+          >
+            <h3 style="text-shadow: 3px 3px black;" class="opacity-1 text-light fw-bold mt-3 text-center">
+              cooking
+            </h3>
+          </div>
+          <div
+            style="background-image: url('asset/novel.webp'); background-size: cover;"
+            class="card col-12 col-lg-2 border-0 p-0 rounded-3"
+          >
+            <h3 style="text-shadow: 3px 3px black;" class="opacity-1 text-light fw-bold mt-3 text-center">novel</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="topOfWeek" class="container-fluid bgPrimaryColor py-5 m-0">
+      <div class="container-lg p-0">
+        <h2 class="text-light fw-bold">The top of the week</h2>
+        <div class="row d-flex row justify-content-between mt-4 m-0 gap-5">
+          <div class="col-12 col-sm-5 col-xl-3 border-0 p-0 rounded-3">
+            <img
+              style="object-fit: cover"
+              class="img-fluid w-100 rounded-3"
+              src="asset/bumi.webp"
+              alt="bumi"
+            />
+            <div class="mt-3">
+              <div class="d-flex justify-content-between align-items-start">
+                <h4 class="text-light fw-semibold">Novel Bumi</h4>
+                <h5 class="text-light fw-semibold">Rp20.000</h5>
+              </div>
+              <h5 class="text-light fw-medium">By Tere liye</h5>
+              <h5 class="text-light fw-medium">Stok : 34</h5>
+              <div class="d-flex justify-content-between align-items-end">
+                <div class="d-flex gap-1">
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <p class="ms-1 text-light m-0 p-0">(1)</p>
+                </div>
+                <i
+                  style="border: 2px solid white; color: white; cursor: pointer"
+                  class="like bi bi-heart-fill rounded-5 p-2 d-flex justify-content-center align-items-center"
+                ></i>
+              </div>
+            </div>
+            <a
+              href=""
+              style="color: #0e8ed7"
+              class="btn btn-light rounded-5 w-100 py-2 fw-bold fs-5 mt-3"
+              >Buy</a
+            >
+          </div>
+          <div class="col-12 col-sm-5 col-xl-3 border-0 p-0 rounded-3">
+            <img
+              style="object-fit: cover"
+              class="img-fluid w-100 rounded-3"
+              src="asset/why.webp"
+              alt=""
+            />
+            <div class="mt-3">
+              <div class="d-flex justify-content-between align-items-start">
+                <h4 class="text-light fw-semibold">Why?</h4>
+                <h5 class="text-light fw-semibold">Rp45.000</h5>
+              </div>
+              <h5 class="text-light fw-medium">By YeaRimDang</h5>
+              <h5 class="text-light fw-medium">Stok : 3</h5>
+              <div class="d-flex justify-content-between align-items-end">
+                <div class="d-flex gap-1">
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <p class="ms-1 text-light m-0 p-0">(80)</p>
+                </div>
+                <i
+                  style="border: 2px solid white; color: white; cursor: pointer"
+                  class="like bi bi-heart-fill rounded-5 p-2 d-flex justify-content-center align-items-center"
+                ></i>
+              </div>
+            </div>
+            <a
+              href=""
+              style="color: #0e8ed7"
+              class="btn btn-light rounded-5 w-100 py-2 fw-bold fs-5 mt-3"
+              >Buy</a
+            >
+          </div>
+          <div class="col-12 col-md-5 col-xl-3 border-0 p-0 rounded-3">
+            <img
+              style="object-fit: cover"
+              class="img-fluid w-100 rounded-3"
+              src="asset/utbk.webp"
+              alt=""
+            />
+            <div class="mt-3">
+              <div class="d-flex justify-content-between align-items-start">
+                <h4 class="text-light fw-semibold">
+                  Mega Bank UTBK SBMPTN 2023
+                </h4>
+                <h5 class="text-light fw-semibold">Rp100.000</h5>
+              </div>
+              <h5 class="text-light fw-medium">By Media</h5>
+              <h5 class="text-light fw-medium">Stok : 0</h5>
+              <div class="d-flex justify-content-between align-items-end">
+                <div class="d-flex gap-1">
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-fill m-0 p-0"
+                  ></i>
+                  <i
+                    style="color: rgb(255, 229, 32)"
+                    class="bi bi-star-half m-0 p-0"
+                  ></i>
+                  <p class="ms-1 text-light m-0 p-0">(1248)</p>
+                </div>
+                <i
+                  style="border: 2px solid white; color: white; cursor: pointer"
+                  class="like bi bi-heart-fill rounded-5 p-2 d-flex justify-content-center align-items-center"
+                ></i>
+              </div>
+            </div>
+            <a
+              onclick="showSoldOutPopUp()"
+              class="btn btn-light rounded-5 text-danger w-100 py-2 fw-bold fs-5 mt-3"
+              >Sold out</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partner" class="container-fluid py-5 m-0">
+      <h2 class="container-lg textPrimaryColor fw-bold p-0">
+        In collaboration with
+      </h2>
+      <div class="collabWrapper container-fluid p-0">
+        <div class="slide d-inline-block">
+          <img
+            style="width: 150px; margin: 0 150px"
+            src="asset/erlangga.webp"
+            alt=""
+          />
+          <img
+            style="width: 200px; margin: 0 150px"
+            src="asset/gramedia.webp"
+            alt=""
+          />
+          <img
+            style="width: 200px; margin: 0 150px"
+            src="asset/bobo.webp"
+            alt=""
+          />
+          <img
+            style="width: 200px; margin: 0 150px"
+            src="asset/forbes.svg"
+            alt=""
+          />
+          <img
+            style="width: 220px; margin: 0 150px"
+            src="asset/kompas.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section id="brand" class="container-fluid h-100 py-5 m-0">
+      <div class="container-lg p-0">
+        <h2 class="textPrimaryColor fw-bold">Choose By Brand</h2>
+        <div class="row justify-content-center gap-5 gap-xl-4 gap-xxl-5 m-0 mt-5">
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/erlangga.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Erlangga</h5>
+              <p class="textSecondaryColor fw-normal m-0">Jakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/bukunesia.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Bukunesia</h5>
+              <p class="textSecondaryColor fw-normal m-0">Yogyakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/plotPoint.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Plot Point</h5>
+              <p class="textSecondaryColor fw-normal m-0">Jakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/inari.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Inari</h5>
+              <p class="textSecondaryColor fw-normal m-0">Tangerang</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/twigora.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Twigora</h5>
+              <p class="textSecondaryColor fw-normal m-0">Jakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/haru.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Haru</h5>
+              <p class="textSecondaryColor fw-normal m-0">Ponorogo</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/metagraf.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Metagraf</h5>
+              <p class="textSecondaryColor fw-normal m-0">Magelang</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/grasindo.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Grasindo</h5>
+              <p class="textSecondaryColor fw-normal m-0">Jakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/divaPress.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Diva Press</h5>
+              <p class="textSecondaryColor fw-normal m-0">Yogyakarta</p>
+            </div>
+          </div>
+          <div
+            class="col-10 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center align-items-center bg-light shadow-sm py-2 px-3 rounded-3"
+          >
+            <img
+              style="width: 80px"
+              class="img-fluid rounded-circle"
+              src="asset/andi.webp"
+              alt=""
+            />
+            <div class="ms-2">
+              <h5 class="fw-semibold textSecondaryColor m-0">Andi</h5>
+              <p class="textSecondaryColor fw-normal m-0">Yogyakarta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="service" class="container-fluid m-0 py-5">
+      <div class="container-lg p-0">
+        <h2 class="textPrimaryColor fw-bold">Service that we provide</h2>
+        <div class="row d-flex row m-0 justify-content-between mt-5 gap-5">
+          <div class="col-12 col-sm-5 col-xl-3 bg-light rounded-4 p-0 rounded-4 shadow-sm h-100">
+            <h3 class="fw-bold pt-4 px-4 textSecondaryColor">
+              Online Payment Process
+            </h3>
+            <p class="mt-5 fw-normal px-4">
+              Does not have cash? choose online payment
+            </p>
+            <img
+              class="img-fluid rounded-bottom-4"
+              src="asset/onlinePayment.webp"
+              alt="online payment"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-12 col-sm-5 col-xl-3 bg-light rounded-3 p-0 rounded-4 shadow-sm h-100">
+            <h3 class="fw-bold pt-4 px-4 textSecondaryColor">
+              You Can Get The Cash Back Easily
+            </h3>
+            <p class="mt-5 fw-normal px-4">
+              Your order is damaged and different from the one in the photo?
+            </p>
+            <img
+              class="img-fluid rounded-bottom-4"
+              src="asset/cashBack.webp"
+              alt="cash back"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-12 col-md-5 col-xl-3 bg-light rounded-3 p-0 rounded-4 shadow-sm">
+            <h3 class="fw-bold pt-4 px-4 textSecondaryColor">
+              Home Delivery Option
+            </h3>
+            <p class="mt-5 fw-normal px-4">
+              lazy to go to the shop? select the delivery service option
+            </p>
+            <img
+              class="img-fluid rounded-bottom-4"
+              src="asset/homeDelivery.webp"
+              alt="home delivery"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="container-fluid m-0 py-5">
+      <div class="container-lg p-0">
+        <h2 class="textPrimaryColor fw-bold">Frequently Asked Questions</h2>
+        <p class="textSecondaryColor">
+          Is there anything you are still confused about? maybe this can help
+        </p>
+        <div class="row d-flex row m-0 mt-5 gap-5 justify-content-between">
+          <div class="col-12 col-lg-5 d-flex flex-row align-items-start p-0">
+            <i
+              style="border-color: #033059 !important"
+              class="bi bi-emoji-frown-fill border border-2 rounded-3 p-1 fs-5 textSecondaryColor"
+            ></i>
+            <div class="ms-3">
+              <h5 class="fw-semibold textSecondaryColor m-0">
+                what if the book wrapper comes in a torn state?
+              </h5>
+              <p class="mt-2 textSecondaryColor">
+                you can get 100% cash back and get new books for free.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex flex-row align-items-start p-0">
+            <i
+              style="border-color: #033059 !important"
+              class="bi bi-piggy-bank-fill border border-2 rounded-3 p-1 fs-5 textSecondaryColor"
+            ></i>
+            <div class="ms-3">
+              <h5 class="fw-semibold textSecondaryColor m-0">
+                can i buy books in installments?
+              </h5>
+              <p class="mt-2 textSecondaryColor">
+                of course, you can! You can repay a minimum of 3 months and
+                maximum of 5 months.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex flex-row align-items-start p-0">
+            <i
+              style="border-color: #033059 !important"
+              class="bi bi-car-front-fill border border-2 rounded-3 p-1 fs-5 textSecondaryColor"
+            ></i>
+            <div class="ms-3">
+              <h5 class="fw-semibold textSecondaryColor m-0">
+                if the courier is very long in delivery?
+              </h5>
+              <p class="mt-2 textSecondaryColor">
+                there may be obstacles on the way, but don't worry, you get 50%
+                off for your next purchase.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex flex-row align-items-start p-0">
+            <i
+              style="border-color: #033059 !important"
+              class="bi bi-calendar-fill border border-2 rounded-3 p-1 fs-5 textSecondaryColor"
+            ></i>
+            <div class="ms-3">
+              <h5 class="fw-semibold textSecondaryColor m-0">
+                how long does it take to arrive the book?
+              </h5>
+              <p class="mt-2 textSecondaryColor">
+                for the estimate it depends on how far your location and the
+                seller are.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="getInTouch" class="container-fluid m-0">
+      <form class="container-lg py-5 p-0">
+        <h2 class="textPrimaryColor fw-bold">Get in touch with us</h2>
+        <p class="textSecondaryColor">
+          Your message will sended to our email
+        </p>
+        <ul class="row gap-4 justify-content-between m-0 p-0 mt-5">
+          <li class="col-12 col-md-5 list-unstyled p-0">
+            <label for="">Username</label><br>
+            <input class="form-control w-100 border-0 bg-light rounded-3 py-2 px-3 mt-2" type="text" placeholder="Enter you username" autocomplete="off" required>
+          </li>
+          <li class="col-12 col-md-5 list-unstyled p-0">
+            <label for="">Email</label><br>
+            <input class="form-control w-100 border-0 bg-light rounded-3 py-2 px-3 mt-2" type="text" placeholder="Enter you email" autocomplete="off" required>
+          </li>
+          <li class="col-12 list-unstyled p-0">
+            <label for="">Message</label><br>
+            <textarea style="resize: none;" rows="8" class="form-control w-100 border-0 bg-light rounded-3 py-2 px-3 mt-2" type="text" placeholder="Enter you message" required></textarea>
+          </li>
+          <li class="col-12 list-unstyled p-0 mt-1">
+            <a class="btn bgSecondaryColor w-100 text-light py-3 fs-5 fw-bold rounded-3" onclick="showInfoPopUp()">Send message</a>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <footer class="container-fluid h-50 bgSecondaryColor m-0">
+      <div class="container-lg py-5 p-0">
+        <div class="row gap-4 gap-xl-1">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+            <div class="d-flex align-items-center">
+              <img
+                style="width: 60px"
+                class="img-fluid"
+                src="asset/whiteLogo.webp"
+                alt="book store logo"
+              />
+              <a
+                href="#home"
+                class="h3 text-decoration-none ms-3 fw-bold text-light"
+                >Bajakan Store
+              </a>
+            </div>
+            <p class="text-light mt-4">
+              the easiest way to open a window to the world is to read, and we
+              will help you
+            </p>
+            <h4 class="text-light fw-semibold mt-5">Accepted Payments</h4>
+            <div class="row gap-2 m-0 mt-3">
+              <img
+                src="asset/dana.webp"
+                alt="dana"
+                class="col-3 col-sm-4 col-md-3 bg-white p-3 rounded-3 img-fluid"
+              />
+              <img
+                src="asset/paypal.webp"
+                alt="paypal"
+                class="col-3 col-sm-4 col-md-3 bg-white p-3 rounded-3 img-fluid"
+              />
+              <img
+                src="asset/mandiri.webp"
+                alt="mandiri"
+                class="col-3 col-sm-4 col-md-3 bg-white p-3 rounded-3 img-fluid"
+              />
+              <img
+                style="height: 50%"
+                src="asset/bca.webp"
+                alt="bca"
+                class="col-3 col-sm-4 col-md-3 bg-white p-3 rounded-3 img-fluid"
+              />
+              <img
+                style="height: 50%"
+                src="asset/shopeePay.webp"
+                alt="sp"
+                class="col-3 col-sm-4 col-md-3 bg-white p-2 rounded-3 img-fluid"
+              />
+              <img
+                style="height: 50%"
+                src="asset/ovo.webp"
+                alt="ovo"
+                class="col-3 col-sm-4 col-md-3 bg-white p-3 rounded-3 img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-5 col-md-3 col-lg-3 col-xl-2 text-light d-flex flex-column mt-3">
+            <h5 class="fw-semibold">Contact</h5>
+            <a class="text-decoration-none text-light m-0 mt-2"
+              >085225990456</a
+            >
+            <a class="text-decoration-none text-light m-0 mt-2"
+              >bookstore@gmail.com</a
+            >
+          </div>
+          <div class="col-12 col-sm-5 col-md-3 col-lg-3 col-xl-2 d-flex flex-column mt-3">
+            <h5 class="text-light fw-semibold">Menu</h5>
+            <a href="#categories" class="text-decoration-none text-light m-0 mt-2"
+              >categories</a
+            >
+            <a href="#topOfWeek" class="text-decoration-none text-light m-0 mt-2"
+              >Top of week
+              <span class="bgPrimaryColor text-light py-2 px-2 rounded-3 ms-1"
+                >new!</span
+              ></a
+            >
+            <a href="#brand" class="text-decoration-none text-light m-0 mt-2"
+              >brand</a
+            >
+            <a href="#partner" class="text-decoration-none text-light m-0 mt-2"
+              >partner</a
+            >
+          </div>
+          <div class="col-12 col-xl-2 d-flex flex-column mt-3">
+            <h5 class="text-light fw-semibold">Help</h5>
+            <a href="#categories" class="text-decoration-none text-light m-0 mt-2"
+              >service</a
+            >
+            <a href="#categories" class="text-decoration-none text-light m-0 mt-2"
+              >FAQ</a
+            >
+            <a href="#getInTouch" class="text-decoration-none text-light m-0 mt-2"
+              >get in touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/popUp.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/humburger.js"></script>
+  </body>
+</html>
